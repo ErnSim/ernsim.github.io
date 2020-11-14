@@ -1,0 +1,48 @@
+*{margin: 0;padding: 0;}
+
+nav
+{
+	font-size: 2em;
+	position: fixed;
+	top: 15px;
+	right: 15px;
+}
+
+
+
+.container /* max-height: 100vh; */
+{
+	max-height: 100vh;
+	overflow-x: auto;
+	width: 100vw;
+	display: flex;
+}
+
+/* wraspper---> min-widht:....; */
+.container .box
+{
+
+	background-color: #7fa832;
+	/*padding: 2vh;*/
+	min-width: 100vw;
+	height: 100vh;
+	
+}
+
+.container .box:nth-child(odd) 
+{
+  background-color: #658628;
+}
+
+section::-webkit-scrollbar
+{
+	width: 0;
+}
+
+footer
+{
+	font-size: 2em;
+	position: fixed;
+	bottom: 15px;
+	left: 15px;
+}
