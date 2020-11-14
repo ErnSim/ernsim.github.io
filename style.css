@@ -37,7 +37,6 @@ nav
 	min-width: 100vw;
 	height: 100vh; /* deafultowo 100vh (na razie sprawić by móc scrollować domyślnie osią X) */
 
-	/* BUG1 (40, 63 linijka) - nie działają poprawnie odnośniki pomiędzy sekcjami z flexem*/
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -60,10 +59,8 @@ nav
 	width: 80%;
 	height: 50px; 
 
-	/* BUG1 (40, 63 linijka) */
 	justify-content: center;
 	align-items: center;
-
 }
 
 section::-webkit-scrollbar
