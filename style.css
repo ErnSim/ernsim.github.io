@@ -117,8 +117,6 @@ nav a
 		transform-origin: left;
 		transition: transform 0.25s;
 	}
-
-
 /* ANIMACJA */
 
 /* DO POPRAWY - Wysrodkowanie nawigacji na małej szerokości */
@@ -134,11 +132,10 @@ nav a
 		margin-right: auto;
 		
 		/*justify-content: space-between;*/
-		
 	}	
 	nav a
   	{
-    	background-color: red; /*sprawdzenie czy wyłapuje szerokość*/
+    	/*background-color: red;*/ /*sprawdzenie czy wyłapuje szerokość*/
 
     	margin-left: 0.5em;
 		margin-right: 0.5em;
@@ -206,15 +203,18 @@ footer
 
 .logo
 {
-	
-	filter: invert(1);
-	opacity: 0.2;
-	width: 500px;
+	filter: invert(1) opacity(20%) drop-shadow(45px 45px 15px rgba(0,0,0,1));
+	width: 40em;
 	transition: 0.25s;
 }
 
 .logo:hover
 {
-	width: 515px;
+	width: 39em;
 	transition: 0.25s;
+}
+
+.hoverTitle
+{
+	font-size: 1.5em;
 }
