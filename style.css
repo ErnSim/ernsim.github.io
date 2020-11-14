@@ -21,21 +21,105 @@ nav
 	flex-wrap: wrap;
 	top: 0;
 	right: 0;
-	
 }
 
 nav a
 {	/*może dodać cień*/
 	text-decoration: none;
 	color: rgba(255,255,255,0.7);
-	margin-left: 1em;
-	margin-right: 1em;
+	text-shadow: 3px 3px 10px rgba(0,0,0,0.5);
+	letter-spacing: 2px;
+	padding: 7px;
+
+	margin-left: 0.8em;
+	margin-right: 0.8em;
 
 	position: relative;
 	display: inline-block;
-
 }
 
+/* ANIMACJA */
+	nav a span
+	{
+		position: absolute;
+		display: block;
+		background-color: #E0B161;
+	}
+
+	nav a span:nth-child(1) /* lewa krawędź przycisku */
+	{
+		left: 0;
+		bottom: 0;
+		width: 1px;
+		height: 15px;
+		transform: scaleY(0);
+		transform-origin: bottom;
+		transition: transform 0.25s;
+	}
+
+	nav a:hover span:nth-child(1)
+	{
+		transform: scaleY(1);
+		transform-origin: bottom;
+		transition: transform 0.25s;
+	}
+
+	nav a span:nth-child(2) /* górna krawędź przycisku */
+	{
+		right: 0;
+		top: 0;
+		height: 1px;
+		width: 15px;
+		transform: scaleX(0);
+		transform-origin: right;
+		transition: transform 0.25s;
+	}
+
+	nav a:hover span:nth-child(2)
+	{
+		transform: scaleX(1);
+		transform-origin: right;
+		transition: transform 0.25s;
+	}
+
+	nav a span:nth-child(3) /* prawa krawędź przycisku */
+	{
+		right: 0;
+		top: 0;
+		width: 1px;
+		height: 15px;
+		transform: scaleY(0);
+		transform-origin: top;
+		transition: transform 0.25s;
+	}
+
+	nav a:hover span:nth-child(3)
+	{
+		transform: scaleY(1);
+		transform-origin: top;
+		transition: transform 0.25s;
+	}
+
+	nav a span:nth-child(4) /* dolna krawędź przycisku */
+	{
+		left: 0;
+		bottom: 0;
+		height: 1px;
+		width: 15px;
+		transform: scaleX(0);
+		transform-origin: left;
+		transition: transform 0.25s;
+	}
+
+	nav a:hover span:nth-child(4)
+	{
+		transform: scaleX(1);
+		transform-origin: left;
+		transition: transform 0.25s;
+	}
+
+
+/* ANIMACJA */
 
 /* DO POPRAWY - Wysrodkowanie nawigacji na małej szerokości */
 @media only screen and (max-width: 700px) 
@@ -61,57 +145,53 @@ nav a
   	}
 }
 
+/* HORIZONTAL SCROLL */
+	.container 
+	{
+		max-height: 100vh;
+		width: 100vw;
 
-.container 
-{
-	max-height: 100vh;
-	width: 100vw;
+		scroll-behavior: smooth;
 
-	scroll-behavior: smooth;
+		/* DO POPRAWY - Ogarnąć scrolla który działa tylko w osi X i go nie widać */
+		overflow-x: auto;
+		display: flex;
+		overflow: hidden; /* Brak możliwośći użycja scrolla ale przynajmniej go nie widać */
+	}
 
-	/* DO POPRAWY - Ogarnąć scrolla który działa tylko w osi X i go nie widać */
-	overflow-x: auto;
-	display: flex;
-	overflow: hidden; /* Brak możliwośći użycja scrolla ale przynajmniej go nie widać */
-}
+	.container .box
+	{
+		background-color: rgba(0,0,0,0.5);
 
-.container .box
-{
-	background-color: rgba(0,0,0,0.5);
+		min-width: 100vw;
+		height: 100vh;
 
-	min-width: 100vw;
-	height: 100vh; /* deafultowo 100vh (na razie sprawić by móc scrollować domyślnie osią X) */
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
+	.container .box:nth-child(odd) 
+	{
+	  background-color: transparent;
+	}
 
-.container .box:nth-child(odd) 
-{
-  background-color: transparent;
-}
+	.content
+	{ 
+		font-size: 1em;
+		color: rgba(255,255,255,0.7);
+		text-align: center;
 
-.content
-{ 
-	font-size: 1em;
-	color: rgba(255,255,255,0.7);
-	text-align: center;
+		background-color: #E0B161;
 
-	background-color: red;
+		max-width: 50em;
+		width: 80%;
+		padding: 2em;
 
-	max-width: 50em;
-	width: 80%;
-	height: 50px; 
-
-	justify-content: center;
-	align-items: center;
-}
-
-section::-webkit-scrollbar
-{
-	width: 0;
-}
+		justify-content: center;
+		align-items: center;
+	}
+/* HORIZONTAL SCROLL */
 
 footer
 {
