@@ -166,7 +166,7 @@ nav a
 	}
 }
 
-/* HORIZONTAL SCROLL */
+/* SCROLL */
 	.container 
 	{
 		max-height: 100vh;
@@ -175,15 +175,30 @@ nav a
 		scroll-behavior: smooth;
 
 		/* TRYB VERTYKALNY */
-		/*	overflow: auto;*/
+			overflow-y: auto;
 		/* TRYB VERTYKALNY */
 		
 		/* TRYB HORYZONTALNY */ /* na razie nie funkcjonuje scrolowanie */
+		/*
 			display: flex;
 			overflow-x: hidden; 
 			overflow-y: hidden;
+		*/
 		/* TRYB HORYZONTALNY */
 	}
+
+	/* USUWANIE SCOLLBAR'A*/
+		.container::-webkit-scrollbar /* Chromium*/
+		{
+  			display: none;
+		}
+
+		.container
+		{
+  			-ms-overflow-style: none;  /* IE i stary-Edge */
+  			scrollbar-width: none;  /* Firefox */
+		}
+	/* USUWANIE SCOLLBAR'A*/
 
 	.container .box
 	{
@@ -218,7 +233,7 @@ nav a
 		justify-content: center;
 		align-items: center;
 	}
-/* HORIZONTAL SCROLL */
+/* SCROLL */
 
 footer
 {
