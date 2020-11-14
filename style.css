@@ -1,6 +1,7 @@
 *{margin: 0;padding: 0; font-family: 'Noto Sans', sans-serif;}
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
 
+
 body
 {
 	background-image: url("images/background.png");
@@ -55,6 +56,18 @@ nav a
 		transform: scaleY(0);
 		transform-origin: bottom;
 		transition: transform 0.25s;
+		transition: 0.25s;
+	}
+
+	nav a
+	{
+		transition: 0.25s;
+	}
+
+	nav a:hover
+	{
+		color: white;
+		transition: 0.25s;
 	}
 
 	nav a:hover span:nth-child(1)
@@ -140,6 +153,16 @@ nav a
     	margin-left: 0.5em;
 		margin-right: 0.5em;
   	}
+/* logo też się nie skaluje coś */
+  	.logo
+	{
+		width: 100px;
+	}
+
+	.logo:hover
+	{
+		width: 100px;
+	}
 }
 
 /* HORIZONTAL SCROLL */
@@ -231,6 +254,26 @@ footer
 	color: rgba(255,255,255,0.7);
 	text-align: left;
 }
+
+footer a
+{
+	text-decoration: none;
+	font-size: 1em;
+	color: rgba(255,255,255,0.7);
+	text-shadow: 3px 3px 10px rgba(0,0,0,0.5);
+
+	margin-left: 0.8em;
+	margin-right: 0.8em;
+
+	transition: 0.25s;
+}
+
+footer a:hover
+{
+	color: white;
+	transition: 0.25s;
+}
+
 
 /* Spróbować to uzależnić od aktywacji .logo:hover;
 .hoverTitle
