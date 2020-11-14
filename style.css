@@ -1,37 +1,35 @@
 *{margin: 0;padding: 0;}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
 
 nav
 {
 	font-size: 2em;
+
 	position: fixed;
 	top: 15px;
 	right: 15px;
 }
 
-
-
-.container /* max-height: 100vh; */
+.container 
 {
 	max-height: 100vh;
-	overflow-x: auto;
 	width: 100vw;
+
+	overflow-x: auto;
 	display: flex;
 }
 
-/* wraspper---> min-widht:....; */
 .container .box
 {
+	background-color: rgba(0,0,0,0.5);
 
-	background-color: #7fa832;
-	/*padding: 2vh;*/
 	min-width: 100vw;
 	height: 100vh;
-	
 }
 
 .container .box:nth-child(odd) 
 {
-  background-color: #658628;
+  background-color: transparent;
 }
 
 section::-webkit-scrollbar
@@ -42,6 +40,7 @@ section::-webkit-scrollbar
 footer
 {
 	font-size: 2em;
+	
 	position: fixed;
 	bottom: 15px;
 	left: 15px;
