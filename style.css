@@ -278,6 +278,12 @@ footer a:hover
 	transition: 0.25s;
 }
 
+p
+{
+	margin-bottom: 1em;
+	text-align: justify;
+}
+
 
 /* Spróbować to uzależnić od aktywacji .logo:hover;
 .hoverTitle
