@@ -175,15 +175,15 @@ nav a
 		scroll-behavior: smooth;
 
 		/* TRYB VERTYKALNY */
-			overflow-y: auto;
+		/*	overflow-y: auto;*/
 		/* TRYB VERTYKALNY */
 		
 		/* TRYB HORYZONTALNY */ /* na razie nie funkcjonuje scrolowanie */
-		/*
+		
 			display: flex;
 			overflow-x: hidden; 
 			overflow-y: hidden;
-		*/
+		
 		/* TRYB HORYZONTALNY */
 	}
 
