@@ -174,10 +174,15 @@ nav a
 
 		scroll-behavior: smooth;
 
-		/* DO POPRAWY - Ogarnąć scrolla który działa tylko w osi X i go nie widać */
-		overflow-x: auto;
-		display: flex;
-		overflow: hidden; /* Brak możliwośći użycja scrolla ale przynajmniej go nie widać */
+		/* TRYB VERTYKALNY */
+		/*	overflow: auto;*/
+		/* TRYB VERTYKALNY */
+		
+		/* TRYB HORYZONTALNY */ /* na razie nie funkcjonuje scrolowanie */
+			display: flex;
+			overflow-x: hidden; 
+			overflow-y: hidden;
+		/* TRYB HORYZONTALNY */
 	}
 
 	.container .box
