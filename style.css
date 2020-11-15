@@ -134,18 +134,25 @@ nav a:hover span:nth-child(4) {
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth; }
 
-/* USUWANIE SCOLLBAR'A*/
-/*		.container::-webkit-scrollbar /* Chromium*/
-/*		{
-/*			display: none;
-/*		}
-/*
-/*		.container
-/*		{
-/*			-ms-overflow-style: none;  /* IE i stary-Edge */
-/*			scrollbar-width: none;  /* Firefox */
-/*		}
-	/* USUWANIE SCOLLBAR'A*/
+/* STYL SCROLLBAR'A */
+/* Firefox */
+.container {
+  scrollbar-width: thin;
+  scrollbar-color: #B38D4D rgba(0, 0, 0, 0); }
+
+/* Firefox */
+/* Chromium */
+::-webkit-scrollbar {
+  height: 6px; }
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0); }
+
+::-webkit-scrollbar-thumb {
+  background: #B38D4D; }
+
+/* Chromium */
+/* STYL SCROLLBAR'A */
 .box {
   background-color: rgba(0, 0, 0, 0.5);
   min-width: 100vw;
