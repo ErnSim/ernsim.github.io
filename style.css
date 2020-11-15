@@ -16,15 +16,14 @@ nav {
   font-size: 1.5em;
   font-weight: 400;
   padding: 1.5em;
-  position: fixed;
-  display: flex;
-  flex-wrap: wrap;
   top: 0;
   right: 0;
-  z-index: 10; }
+  z-index: 10;
+  position: fixed;
+  display: flex;
+  flex-wrap: wrap; }
 
 nav a {
-  /*może dodać cień*/
   text-decoration: none;
   color: rgba(255, 255, 255, 0.7);
   text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
@@ -113,16 +112,12 @@ nav a:hover span:nth-child(4) {
     padding-top: 1.5em;
     right: auto;
     margin-left: auto;
-    margin-right: auto;
-    /*justify-content: space-between;*/ }
+    margin-right: auto; }
 
   nav a {
-    /*background-color: red;*/
-    /*sprawdzenie czy wyłapuje szerokość*/
     margin-left: 0.5em;
     margin-right: 0.5em; }
 
-  /* logo też się nie skaluje coś */
   .logo {
     width: 100px; }
 
@@ -132,14 +127,14 @@ nav a:hover span:nth-child(4) {
 .container {
   max-height: 100vh;
   width: 100vw;
-  scroll-behavior: smooth;
   /* TRYB HORYZONTALNY */
   display: flex;
   overflow-x: hidden;
   overflow-y: auto;
   /* TRYB HORYZONTALNY */
   overflow-x: scroll;
-  scroll-snap-type: x mandatory; }
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth; }
 
 /* USUWANIE SCOLLBAR'A*/
 .container::-webkit-scrollbar {
@@ -156,12 +151,12 @@ nav a:hover span:nth-child(4) {
   background-color: rgba(0, 0, 0, 0.5);
   min-width: 100vw;
   height: 100vh;
-  display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   /* Potrzebne jest by tytuły/nagłówki jako postition:absolute, zachowywały sowją pozycję względem .box'a*/
-  scroll-snap-align: start; }
+  scroll-snap-align: start;
+  display: flex; }
 
 .box:nth-child(odd) {
   background-color: transparent; }
@@ -170,7 +165,6 @@ nav a:hover span:nth-child(4) {
   font-size: 1em;
   color: rgba(255, 255, 255, 0.7);
   text-align: center;
-  /*background-color: #E0B161;*/
   max-width: 50em;
   width: 80%;
   padding: 2em;
@@ -182,10 +176,10 @@ footer {
   color: rgba(255, 255, 255, 0.7);
   font-size: 1.5em;
   font-weight: 700;
-  position: fixed;
   bottom: 1.5em;
   left: 1.5em;
-  z-index: 10; }
+  z-index: 10;
+  position: fixed; }
 
 .logo {
   filter: invert(1) opacity(20%) drop-shadow(45px 45px 15px black);
