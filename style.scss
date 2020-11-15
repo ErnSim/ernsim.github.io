@@ -171,26 +171,24 @@ nav a
 
 		/* TRYB HORYZONTALNY */
 			display: flex;
-			overflow-x: hidden; 
-			overflow-y: auto;
+			overflow-y: hidden;
 		/* TRYB HORYZONTALNY */
 
-		overflow-x: scroll;
 		scroll-snap-type: x mandatory;
 		scroll-behavior: smooth;
 	}
 
 	/* USUWANIE SCOLLBAR'A*/
-		.container::-webkit-scrollbar /* Chromium*/
-		{
-			display: none;
-		}
-
-		.container
-		{
-			-ms-overflow-style: none;  /* IE i stary-Edge */
-			scrollbar-width: none;  /* Firefox */
-		}
+/*		.container::-webkit-scrollbar /* Chromium*/
+/*		{
+/*			display: none;
+/*		}
+/*
+/*		.container
+/*		{
+/*			-ms-overflow-style: none;  /* IE i stary-Edge */
+/*			scrollbar-width: none;  /* Firefox */
+/*		}
 	/* USUWANIE SCOLLBAR'A*/
 
 	.box
