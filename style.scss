@@ -138,7 +138,6 @@ nav a
 {
 	nav
 	{
-		
 		width: 60%;
 		padding-top: 1.5em;
 		right:auto;
@@ -174,33 +173,31 @@ nav a
 
 		scroll-behavior: smooth;
 
-		/* TRYB VERTYKALNY */
-		/*	overflow-y: auto;*/
-		/* TRYB VERTYKALNY */
-		
-		/* TRYB HORYZONTALNY */ /* na razie nie funkcjonuje scrolowanie */
-		
+		/* TRYB HORYZONTALNY */
 			display: flex;
 			overflow-x: hidden; 
-			overflow-y: hidden;
-		
+			overflow-y: auto;
 		/* TRYB HORYZONTALNY */
+
+		overflow-x: scroll;
+		scroll-snap-type: x mandatory;
 	}
 
 	/* USUWANIE SCOLLBAR'A*/
+	
 		.container::-webkit-scrollbar /* Chromium*/
 		{
-  			display: none;
+			display: none;
 		}
 
 		.container
 		{
-  			-ms-overflow-style: none;  /* IE i stary-Edge */
-  			scrollbar-width: none;  /* Firefox */
+			-ms-overflow-style: none;  /* IE i stary-Edge */
+			scrollbar-width: none;  /* Firefox */
 		}
 	/* USUWANIE SCOLLBAR'A*/
 
-	.container .box
+	.box
 	{
 		background-color: rgba(0,0,0,0.5);
 
@@ -211,9 +208,10 @@ nav a
 		justify-content: center;
 		align-items: center;
 		position: relative; /* Potrzebne jest by tytuły/nagłówki jako postition:absolute, zachowywały sowją pozycję względem .box'a*/
+		scroll-snap-align: start;
 	}
 
-	.container .box:nth-child(odd) 
+	.box:nth-child(odd) 
 	{
 	  background-color: transparent;
 	}
@@ -303,7 +301,6 @@ p
 	margin-bottom: 1em;
 	text-align: justify;
 }
-
 
 /* Spróbować to uzależnić od aktywacji .logo:hover;
 .hoverTitle
