@@ -34,7 +34,7 @@ nav a {
   position: relative;
   display: inline-block; }
 
-/* ANIMACJA */
+/* ANIMACJA PRZYCISKÓW */
 nav a span {
   position: absolute;
   display: block;
@@ -104,7 +104,7 @@ nav a:hover span:nth-child(4) {
   transform-origin: left;
   transition: transform 0.25s; }
 
-/* ANIMACJA */
+/* ANIMACJA PRZYCISKÓW	 */
 /* DO POPRAWY - Wysrodkowanie nawigacji na małej szerokości */
 @media only screen and (max-width: 700px) {
   nav {
@@ -138,7 +138,7 @@ nav a:hover span:nth-child(4) {
 /* Firefox */
 .container {
   scrollbar-width: thin;
-  scrollbar-color: #B38D4D rgba(0, 0, 0, 0); }
+  scrollbar-color: #E0B161 rgba(0, 0, 0, 0); }
 
 /* Firefox */
 /* Chromium */
@@ -149,7 +149,7 @@ nav a:hover span:nth-child(4) {
   background: rgba(0, 0, 0, 0); }
 
 ::-webkit-scrollbar-thumb {
-  background: #B38D4D; }
+  background: #E0B161; }
 
 /* Chromium */
 /* STYL SCROLLBAR'A */
@@ -201,7 +201,7 @@ footer {
   font-size: 3em;
   font-weight: 700;
   letter-spacing: -0.1em;
-  border-bottom: 1px solid #B38D4D;
+  border-bottom: 1px solid #E0B161;
   position: absolute;
   top: 0.5em;
   left: 1em; }
@@ -230,7 +230,7 @@ p {
 /* Spróbować to uzależnić od aktywacji .logo:hover;
 .hoverTitle
 {
-	color: #E0B161;
+	color: $motyw;
 	letter-spacing: 2px;
 	font-size: 1.5em;
 }
